@@ -4,12 +4,17 @@
   "description": "Waveorb validations",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon --exec spekk"
+    "test": "jest --verbose=false --watch"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/eldoy/waveorb-validations"
   },
   "author": "Vidar Eldøy <vidar@eldoy.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "configdb": "^0.2.4",
+    "d8a": "^0.7.1",
+    "jest": "^27.5.1"
+  }
 }

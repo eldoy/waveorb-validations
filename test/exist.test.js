@@ -17,7 +17,7 @@ describe('unique', () => {
   })
 
   // Test exist
-  it.only('should fail if not exist', async () => {
+  it('should fail if not exist', async () => {
 
     let spec = {
       id: {

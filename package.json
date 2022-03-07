@@ -14,7 +14,7 @@
   "license": "MIT",
   "devDependencies": {
     "configdb": "^0.2.4",
-    "d8a": "^0.9.4",
+    "d8a": "^0.9.5",
     "jest": "^27.5.1"
   }
 }

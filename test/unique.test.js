@@ -13,7 +13,7 @@ describe('unique', () => {
       t: function(key) { return key },
       params: { query: {}, values: {} }
     }
-    opt = { ...$, ext: validations($), lax: true }
+    opt = { ext: validations($), lax: true, $ }
   })
 
   // Test unique on create
@@ -43,7 +43,7 @@ describe('unique', () => {
 
     const user = db('user').create({ email: 'test@example.com' })
 
-    opt.params.query = { id: user.id }
+    opt.$.params.query = { id: user.id }
 
     let spec = {
       email: {
@@ -59,7 +59,7 @@ describe('unique', () => {
     expect(result).toBeNull()
 
     // Random other id
-    opt.params.query = { id: 'ckzh6cyj60000halpc89o2kr1' }
+    opt.$.params.query = { id: 'ckzh6cyj60000halpc89o2kr1' }
 
     data.email = 'test@example.com'
 
@@ -93,13 +93,13 @@ describe('unique', () => {
 
     expect(result.email[0]).toBe('validation.unique')
 
-    opt.params.values.site_id = '1234'
+    opt.$.params.values.site_id = '1234'
 
     result = await validate(spec, data, opt)
 
     expect(result.email[0]).toBe('validation.unique')
 
-    opt.params.values.site_id = '4321'
+    opt.$.params.values.site_id = '4321'
 
     result = await validate(spec, data, opt)
 
@@ -118,7 +118,7 @@ describe('unique', () => {
       site_id: '4321'
     })
 
-    opt.params.query = { id: user1.id }
+    opt.$.params.query = { id: user1.id }
 
     let spec = {
       email: {
@@ -136,7 +136,7 @@ describe('unique', () => {
     let result = await validate(spec, data, opt)
     expect(result).toBeNull()
 
-    opt.params.values.email = 'new@example.com'
+    opt.$.params.values.email = 'new@example.com'
 
     result = await validate(spec, data, opt)
     expect(result).toBeNull()

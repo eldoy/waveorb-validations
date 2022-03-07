@@ -13,7 +13,7 @@ describe('unique', () => {
       t: function(key) { return key },
       params: { query: {}, values: {} }
     }
-    opt = { ...$, ext: validations($), lax: true }
+    opt = { ext: validations($), lax: true, $ }
   })
 
   // Test exist

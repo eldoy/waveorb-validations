@@ -4,7 +4,7 @@ const validations = require('../index.js')
 
 let $, opt
 
-describe('unique', () => {
+describe('exist', () => {
 
   beforeEach(() => {
     db('user').clear()

@@ -37,7 +37,7 @@ await $.validate({
   }
 })
 ```
-This example requires a `user` in `$.data.user` and an `user_id` in the associated `account`.
+This example requires a `user` in `$.data.user` and a `user_id` in the associated `account`.
 
 
 #### Unique

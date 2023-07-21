@@ -14,20 +14,6 @@ setup(async function ({ db }) {
   opt = { ext: validations($), lax: true, $ }
 })
 
-var $, opt
-
-setup(async function ({ db }) {
-  db('user').clear()
-  $ = {
-    db,
-    t: function (key) {
-      return key
-    },
-    params: { query: {}, values: {} }
-  }
-  opt = { ext: validations($), lax: true, $ }
-})
-
 // Test unique on create
 it('should validate unique user on create', async function ({
   t,

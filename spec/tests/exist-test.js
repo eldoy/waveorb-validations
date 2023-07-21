@@ -27,12 +27,12 @@ it('should fail if not exist', async function ({ t, db, validate }) {
   }
 
   var result = await validate(spec, data, opt)
-  t.equals(result.id[0], 'validation.exist')
+  t.equal(result.id[0], 'validation.exist')
 
   var project = db('project').create({ name: 'hello' })
 
   data.id = project.id
 
   result = await validate(spec, data, opt)
-  t.equals(result, null)
+  t.equal(result, null)
 })

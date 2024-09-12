@@ -2,7 +2,7 @@ var validations = require('../../index.js')
 
 var $, opt
 
-setup(async function ({ db }) {
+beforeEach(async function ({ db }) {
   db('user').clear()
   $ = {
     db,

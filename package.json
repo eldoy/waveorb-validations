@@ -14,7 +14,6 @@
   "license": "MIT",
   "devDependencies": {
     "configdb": "^0.2.5",
-    "d8a": "^0.9.10",
-    "spekk": "^0.2.2"
+    "d8a": "^0.10.2"
   }
 }
